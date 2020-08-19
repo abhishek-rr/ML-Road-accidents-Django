@@ -1,0 +1,50 @@
+'''
+    val1=int(request.GET['num1'])
+    val2= int(request.GET['num2'])
+    df = pd.read_csv('assets/data12.csv')
+	
+    X=df.drop('MEDV', axis=1)
+    #X = df.iloc[:, 0:1]  # X is the features in our dataset
+    y = df['MEDV']
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.24, random_state=17)
+
+    model = GaussianNB()
+    model.fit(X_train, y_train)
+    predicted_y = model.predict(X_train)
+
+    # now calculating that how much accurate our model is with comparing our predicted values and y_test values
+   # accuracy_score = accuracy_score(y_test, predicted_y)
+   # print(accuracy_score)
+    # df.columns
+    person = pd.DataFrame()
+
+    # Create some feature values for this single row
+
+    person['CRIM'] = [val1]
+    person['RM'] = [val2]
+
+    # View the data
+    # person
+    # the data is stored in Datadrame person
+    predicted_y = model.predict(person)
+    predicted_y1=int(predicted_y)
+    context = {'pred': predicted_y,}
+    print(predicted_y)	
+    '''
+	
+	
+	
+	val1=int(request.GET['num1'])
+	val2= int(request.GET['num2'])
+	housing = pd.read_csv('assets/data12.csv')
+	X=housing.drop('MEDV', axis=1)
+	Y=housing['MEDV']
+	X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=0.33,random_state=17)
+	GaussNB=GaussianNB()
+	GaussNB.fit(X_train,Y_train)
+	pred_tr=GaussNB.predict(X_test)
+	numbers = range(150,300)
+	random1 =random.choice(numbers)
+	pra = pred_tr[1]
+	context = {'pred': pra,}

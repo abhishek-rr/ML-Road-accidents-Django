@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Prediction</h2>
+
+<form class="form-inline" action="/action_page.php">
+  <label for="name">Name</label>
+  <input type="text" id="email" placeholder="Enter Name " name="fname">
+  <label for="roa">Reason Of Absense</label>
+  <input type="text" id="roa" placeholder="Reason" name="roa">
+  <label for="Season">Current Season</label>
+  <input type="text" id="sea" placeholder="Season" name="sea">
+  <label for="df">Disciplinary Failure</label>
+  <input type="text" id="df" placeholder="Disciplinary Failure" name="df">
+  <label>
+    <input type="checkbox" name="remember"> Remember me
+  </label>
+ Select Month:- <div id="head2" style="width:15%;float:right;margin-left:5px;">
+    <select id='gMonth2' onchange="show_month()">
+    <option value=''>--Select Month--</option>
+    <option selected value='1'>Janaury</option>
+    <option value='2'>February</option>
+    <option value='3'>March</option>
+    <option value='4'>April</option>
+    <option value='5'>May</option>
+    <option value='6'>June</option>
+    <option value='7'>July</option>
+    <option value='8'>August</option>
+    <option value='9'>September</option>
+    <option value='10'>October</option>
+    <option value='11'>November</option>
+    <option value='12'>December</option>
+    </select>
+    </div>
+  <label for="df">Disciplinary Failure</label>
+  <input type="text" id="df" placeholder="Disciplinary Failure" name="df">
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

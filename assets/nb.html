@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NBclassifier</title>
+  </head>
+  <style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: white}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+
+  <body>
+    <style>
+    body {
+      background-image: url({% static "pred.jpg" %}); background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    </style>
+    <button class="button" onclick="window.location.href='/'"><a href="/"></a>HOME</button>
+    <br>
+    <br><br><br><br>
+    <h2 style="color:white;font-size:40px;">Total number of Accidents in Year:-         {{pred|safe}}</h2>
+  </body>
+</html>

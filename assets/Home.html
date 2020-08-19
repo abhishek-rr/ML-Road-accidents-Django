@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<!--
+	Greatness by FreeHTML5.co
+	Twitter: http://twitter.com/fh5co
+	URL: http://FreeHTML5.co
+-->
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+
+  .button:hover {background-color: white}
+
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  .caption {
+  text-align: center;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 05%;
+  transform: translate(-50%,-50%);
+}
+  </style>
+
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+  <style>
+  body {
+    background-image: url({% static "road.jpeg" %}); background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  }
+  </style>
+  <center>
+
+</center>
+<div class="caption">
+<h1>ANALYSIS AND PREDICTION</h1>
+<h4>ROAD ACCIDENTS IN INDIA</h4>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button class="button" onclick="window.location.href='trial/'"><a href="/"></a>Naive Bayes</button>
+<br>
+<br>
+<br>
+<br>
+<button class="button" onclick="window.location.href='group/'"><a href="/"></a>Apriori</button>
+<br><br><br><br>
+<button class="button" onclick="window.location.href='kmeans/'"><a href="/"></a>Kmeans</button>
+
+
+</body>
+</html>
