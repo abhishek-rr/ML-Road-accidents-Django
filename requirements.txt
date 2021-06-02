@@ -26,6 +26,6 @@ scipy==1.5.2
 six==1.15.0
 sqlparse==0.3.1
 threadpoolctl==2.1.0
-urllib3==1.25.10
+urllib3==1.26.5
 whitenoise==5.2.0
 dataclasses
